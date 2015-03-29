@@ -19,8 +19,7 @@ if !exists("*NewPlugFromClipboard")
                     \ "Plug \<C-V>'" . plug .  "\<C-V>'" .
                     \ "\<CR>\<ESC>0D")
 
-        execute "saveas" g:plugrc
-
-        PlugInstall
+        call feedkeys(":w\<CR>")
+        call feedkeys(":PlugInstall\<CR>")
     endfunction
 endif
